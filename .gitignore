@@ -1,0 +1,9 @@
+pkg/*
+.loadpath
+.project
+/rdoc/
+*.bundle
+*.so
+*.dll
+/tmp
+*.swf
