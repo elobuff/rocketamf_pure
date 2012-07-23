@@ -164,23 +164,19 @@ require 'rocketamf/remoting'
 #         }
 #       end
 #     end
-#   
+#
 #     # Write self as array to stream
 #     def write_external ser
 #       ser.write_array(self)
 #     end
-#   
+#
 #     # Read array out and replace data with deserialized array.
 #     def read_external des
 #       replace(des.read_object)
 #     end
 #   end
 module RocketAMF
-  begin
-    require 'rocketamf/ext'
-  rescue LoadError
-    require 'rocketamf/pure'
-  end
+  require 'rocketamf/pure'
 
   # Deserialize the AMF string _source_ of the given AMF version into a Ruby
   # data structure and return it. Creates an instance of <tt>RocketAMF::Deserializer</tt>
